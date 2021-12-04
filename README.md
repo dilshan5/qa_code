@@ -17,13 +17,11 @@ You can pass those data via your CI/CD tools during the execution.
 
 ## Continuous Integration/Continuous Deployment
 
-For this example, I have used Jenkins and CircleCI as my CI/CD tools. 
+For this example, I have used Jenkins  as my CI/CD tools. 
 But you have to select only one tool in your project.
 
 You can edit `Jenkinsfile` based on your requirement.
 How to create [Jenkinsfile](https://www.jenkins.io/doc/book/pipeline/jenkinsfile/).
-
-You can edit `./circleci/config.yml` for CircleCI configs.
 
 ## Running Tests
 

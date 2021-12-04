@@ -21,6 +21,7 @@ class ProductServiceTest : ProductService() {
     @Tags(Tag(PIPELINE_1), Tag(REGRESSION))
     fun `IDE-1111 - Verify the success response of Creating a Product`() {
         Given {
+            setContentTypeHeader("application/json")
             setJSONBody(
                 """
                 {
@@ -43,6 +44,7 @@ class ProductServiceTest : ProductService() {
     @Tags(Tag(PIPELINE_1), Tag(REGRESSION))
     fun `IDE-1111 - Verify the HTTP 409 response for create duplicate product IDs`() {
         Given {
+            setContentTypeHeader("application/json")
             setJSONBody(
                 """
                 {
