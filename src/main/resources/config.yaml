@@ -1,0 +1,6 @@
+host: localhost:3001
+environment: QA
+release: v1.0
+client:
+  id: test
+  secret: test
