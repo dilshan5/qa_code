@@ -1,11 +1,9 @@
 package org.example.util
 
 import io.restassured.RestAssured
-import io.restassured.filter.log.RequestLoggingFilter
-import io.restassured.filter.log.ResponseLoggingFilter
+import io.restassured.config.SSLConfig
 import org.junit.jupiter.api.AfterAll
 import org.junit.jupiter.api.BeforeAll
-
 /**
  * Base class for the Test classes
  * @author: Dilshan Fernando
@@ -21,7 +19,7 @@ abstract class TestBase {
         @BeforeAll
         @JvmStatic
         fun setup() {
-            RestAssured.baseURI = "https://${ConfigurationSpecification.getHost()}"
+            RestAssured.baseURI = "http://${ConfigurationSpecification.getHost()}"
             RestAssured.filters(RestAssuredRequestFilter())// log all the requests and responses to logFile.log
             RestAssured.enableLoggingOfRequestAndResponseIfValidationFails()
 
